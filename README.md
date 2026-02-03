@@ -22,7 +22,6 @@ This project emphasizes:
 
 ## What it does
 
-<<<<<<< HEAD
 ### Inputs
 - **English source** text (`--en`)
 - **Chinese translation** text (`--zh`)
@@ -69,14 +68,12 @@ Pipeline:
 
 ## Quickstart (CLI)
 
-<<<<<<< HEAD
 ### 1) Setup
 =======
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-<<<<<<< HEAD
 ```
 
 ### 2) Run the demo
@@ -97,13 +94,12 @@ cat outputs/demo_final3/zh_patched.txt
 ```
 ---
 ### Example Output (Demo)
-The demo intentionally includes an inconsistent translation of “drone program” (e.g., 无人飞行器项目 vs 无人机项目).
+**The demo intentionally includes an inconsistent translation of “drone program” (e.g., 无人飞行器项目 vs 无人机项目).
 TermGuard flags it in report.csv and produces a patched translation enforcing the preferred glossary term (无人机项目) in zh_patched.txt.
-=======
+**=======
 
 python cli.py \
   --en data/demo_en.txt \
   --zh data/demo_zh.txt \
   --glossary data/demo_glossary.csv \
   --out outputs/demo_run
->>>>>>> f1d4f83 (Initial commit: TermGuard terminology consistency checker)
