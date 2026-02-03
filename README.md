@@ -87,8 +87,20 @@ cat outputs/demo_final3/zh_patched.txt
 The demo intentionally includes an inconsistent translation of “drone program” (e.g., 无人飞行器项目 vs 无人机项目).
 TermGuard flags it in report.csv and produces a patched translation enforcing the preferred glossary term (无人机项目) in zh_patched.txt.
 
-python cli.py \
+# Create & activate venv
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run demo
+PYTHONPATH=. python -m termguard.cli \
   --en data/demo_en.txt \
   --zh data/demo_zh.txt \
   --glossary data/demo_glossary.csv \
-  --out outputs/demo_run
+  --out outputs/demo
+
+# Inspect outputs
+head -n 10 outputs/demo/report.csv
+cat outputs/demo/zh_patched.txt
