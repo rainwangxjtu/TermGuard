@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # TermGuard — Terminology Consistency Checker (EN→ZH)
 
 **TermGuard** is a modular **NLP + IR-style pipeline** that detects *terminology inconsistency* in bilingual translation data (English → Chinese), generates a structured **consistency report**, and optionally produces a **patched Chinese translation** that enforces a preferred glossary.
@@ -8,6 +7,18 @@ This project highlights:
 - **Algorithmic term extraction + alignment** (n-grams, TF-IDF weighting, co-occurrence mapping)
 - **Quantitative signals** (entropy / probability-based severity scoring)
 - **Reproducible experiments** via a command-line interface and deterministic demo inputs/outputs
+---
+
+## System Overview
+
+Pipeline stages:
+1) **Preprocess**: sentence segmentation + normalization  
+2) **Term Extraction (EN)**: n-gram candidates + TF-IDF filtering  
+3) **Alignment / Mapping (EN→ZH)**: sentence-pair co-occurrence + candidate scoring  
+4) **Consistency Detection**: 1→many and many→1 mappings + **entropy-based severity**  
+5) **Optional Patching**: replace inconsistent candidates with `preferred_zh` safely  
+6) **Reporting**: export CSV/JSON artifacts for inspection and evaluation
+
 ---
 
 ## What it does
@@ -20,40 +31,7 @@ This project highlights:
 ### Outputs
 - `report.csv` / `report.json`: flagged terms, candidate translations, and severity metrics
 - `zh_patched.txt`: Chinese translation normalized to the preferred glossary (optional)
-
----
-
-## System Overview
-
-Pipeline stages:
-1) **Preprocess**: sentence segmentation + normalization  
-2) **Term Extraction (EN)**: n-gram candidates + TF-IDF filtering  
-3) **Alignment / Mapping (EN→ZH)**: sentence-pair co-occurrence + candidate scoring  
-4) **Consistency Detection**: 1→many and many→1 mappings + **entropy-based severity**  
-5) **Optional Patching**: replace inconsistent candidates with `preferred_zh` safely  
-6) **Reporting**: export CSV/JSON artifacts for inspection and evaluation
-=======
-**Inputs**
-- English source text (document or aligned segments)
-- Chinese translation text
-- Optional glossary CSV (EN term → preferred ZH term)
-
-**Outputs**
-- `report.csv` / `report.json`: inconsistent terms and evidence contexts
-- `zh_patched.txt`: translation patched to preferred glossary (optional)
-
----
-
-## System overview
-
-Pipeline:
-1) preprocess + sentence segmentation
-2) term candidate extraction (EN n-grams + TF-IDF)
-3) bilingual term mapping (sentence-pair co-occurrence + scoring)
-4) inconsistency detection (1-to-many / many-to-1) + severity scoring
-5) optional patching using preferred glossary
-6) reporting and export
-
+  
 ---
 
 ## Quickstart (CLI)
