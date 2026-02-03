@@ -94,9 +94,8 @@ cat outputs/demo_final3/zh_patched.txt
 ```
 ---
 ### Example Output (Demo)
-**The demo intentionally includes an inconsistent translation of “drone program” (e.g., 无人飞行器项目 vs 无人机项目).
+The demo intentionally includes an inconsistent translation of “drone program” (e.g., 无人飞行器项目 vs 无人机项目).
 TermGuard flags it in report.csv and produces a patched translation enforcing the preferred glossary term (无人机项目) in zh_patched.txt.
-**=======
 
 python cli.py \
   --en data/demo_en.txt \
