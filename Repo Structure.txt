@@ -1,0 +1,31 @@
+TermGuard/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── cli.py
+├── streamlit_app.py
+│
+├── termguard/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── preprocess.py
+│   ├── extract_terms.py
+│   ├── align.py
+│   ├── consistency.py
+│   ├── patch.py
+│   ├── report.py
+│   └── pipeline.py
+│
+├── data/
+│   ├── demo_en.txt
+│   ├── demo_zh.txt
+│   └── demo_glossary.csv
+│
+├── tests/
+│   ├── test_preprocess.py
+│   ├── test_extract_terms.py
+│   ├── test_consistency.py
+│   └── test_patch.py
+│
+└── benchmarks/
+    └── benchmark_runtime.py

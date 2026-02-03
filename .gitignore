@@ -1,3 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+
+# OS/editor
+.DS_Store
+.vscode/
+
+# Outputs
+outputs/
+*.log
+
+<<<<<<< HEAD
 # OS
 .DS_Store
 
@@ -16,3 +38,28 @@ outputs/
 
 # Notebooks
 .ipynb_checkpoints/
+=======
+outputs/
+venv/
+__pycache__/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+
+# OS/editor
+.DS_Store
+.vscode/
+
+# Outputs
+outputs/
+*.log
+
