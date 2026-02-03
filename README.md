@@ -59,7 +59,6 @@ Pipeline:
 ## Quickstart (CLI)
 
 ### 1) Setup
-=======
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -68,39 +67,26 @@ pip install -r requirements.txt
 
 ### 2) Run the demo
 ```bash
-rm -rf outputs/demo_final3
+rm -rf outputs/demo
 
 PYTHONPATH=. python ./cli.py \
   --en data/demo_en.txt \
   --zh data/demo_zh.txt \
   --glossary data/demo_glossary.csv \
-  --out outputs/demo_final3
+  --out outputs/demo
 ```
 ### 3) Inspect outputs
 ```bash
 cat outputs/demo_final3/report.csv
 echo "---- PATCHED ----"
-cat outputs/demo_final3/zh_patched.txt
+cat outputs/demo/zh_patched.txt
 ```
 ---
-### Example Output (Demo)
-The demo intentionally includes an inconsistent translation of “drone program” (e.g., 无人飞行器项目 vs 无人机项目).
-TermGuard flags it in report.csv and produces a patched translation enforcing the preferred glossary term (无人机项目) in zh_patched.txt.
+### 4) Expected Output
+```bash
+- report.csv should contain a flagged row for “drone program”
+- zh_patched.txt should normalize mixed variants into “无人机项目”
 
-# Create & activate venv
-python3 -m venv venv
-source venv/bin/activate
 
-# Install dependencies
-pip install -r requirements.txt
 
-# Run demo
-PYTHONPATH=. python -m termguard.cli \
-  --en data/demo_en.txt \
-  --zh data/demo_zh.txt \
-  --glossary data/demo_glossary.csv \
-  --out outputs/demo
 
-# Inspect outputs
-head -n 10 outputs/demo/report.csv
-cat outputs/demo/zh_patched.txt
