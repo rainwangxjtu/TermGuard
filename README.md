@@ -8,16 +8,6 @@ This project highlights:
 - **Algorithmic term extraction + alignment** (n-grams, TF-IDF weighting, co-occurrence mapping)
 - **Quantitative signals** (entropy / probability-based severity scoring)
 - **Reproducible experiments** via a command-line interface and deterministic demo inputs/outputs
-=======
-# TermGuard-Terminology-Consistency-Checker-NLP-IR-Python-
-TermGuard is a modular NLP/IR system that detects **terminology inconsistency** in bilingual translation data (EN→ZH) and generates a **consistency report** plus an optional **patched translation** using a preferred glossary.
-
-This project emphasizes:
-- pipeline architecture and modular design
-- algorithmic term extraction + alignment
-- measurable evaluation hooks
-- reproducible CLI and Streamlit demos
-
 ---
 
 ## What it does
