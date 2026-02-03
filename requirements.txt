@@ -1,9 +1,0 @@
-numpy
-pandas
-scikit-learn
-jieba
-regex
-streamlit
-pytest
-scikit-learn
-jieba
