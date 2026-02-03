@@ -53,13 +53,14 @@ PYTHONPATH=. python ./cli.py \
   --glossary data/demo_glossary.csv \
   --out outputs/demo
 ```
+
 ### 3) Inspect outputs
 ```bash
 cat outputs/demo_final3/report.csv
 echo "---- PATCHED ----"
 cat outputs/demo/zh_patched.txt
 ```
----
+
 ### 4) Expected Output
 ```bash
 - report.csv should contain a flagged row for “drone program”
