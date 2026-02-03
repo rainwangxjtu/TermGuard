@@ -17,7 +17,6 @@ This project emphasizes:
 - algorithmic term extraction + alignment
 - measurable evaluation hooks
 - reproducible CLI and Streamlit demos
->>>>>>> f1d4f83 (Initial commit: TermGuard terminology consistency checker)
 
 ---
 
@@ -65,7 +64,6 @@ Pipeline:
 4) inconsistency detection (1-to-many / many-to-1) + severity scoring
 5) optional patching using preferred glossary
 6) reporting and export
->>>>>>> f1d4f83 (Initial commit: TermGuard terminology consistency checker)
 
 ---
 
@@ -74,7 +72,6 @@ Pipeline:
 <<<<<<< HEAD
 ### 1) Setup
 =======
->>>>>>> f1d4f83 (Initial commit: TermGuard terminology consistency checker)
 ```bash
 python3 -m venv venv
 source venv/bin/activate
